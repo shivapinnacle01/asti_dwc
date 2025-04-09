@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect all traffic from the root domain to /engineering-programs
+RewriteCond %{HTTP_HOST} ^online\.astidubai\.ac\.ae$ [NC]
+RewriteRule ^$ /engineering-programs [R=301,L]
+
+# Redirect /thankyou to /thankyou.html
+RewriteRule ^thankyou$ /thankyou.html [L]
+
+# Redirect for other specific pages
+RewriteRule ^business-programs$ /business-programs.html [L]
+RewriteRule ^engineering-programs$ /engineering-programs.html [L]
+RewriteRule ^contact-us$ /contact-us.html [L]
+RewriteRule ^business-programs-contact-us$ /business-programs-contact-us.html [L]

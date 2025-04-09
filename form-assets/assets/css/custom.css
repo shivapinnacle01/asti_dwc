@@ -1,0 +1,778 @@
+.edu-course-tab.nav-tabs {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 36px;
+}
+
+.nav-item.active {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-tabs .nav-link {
+    background-color: #666967;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size:18px;
+    font-weight: bold
+}
+
+.btn {
+    border-radius: 0px !important
+}
+
+.nav-tabs .nav-link.active {
+    color: #f6f8f9;
+    background-color: #b51818;
+}
+
+.nav-tabs {
+    border-bottom: 0px;
+}
+
+.video-gallery-overlay-area {
+    padding-top: 80px !important;
+}
+
+.single-chart {
+    justify-content: space-around;
+}
+
+.circular-chart {
+    max-height: 60px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.orange .circle {
+    stroke: white;
+}
+
+.percentage {
+    font-size: 0.5em;
+    text-anchor: middle;
+    fill: #f9f9f9;
+}
+
+
+a.edu-btn,
+button.edu-btn {
+    background: brown;
+    color: white;
+}
+
+a.edu-btn:hover,
+button.edu-btn:hover {
+    background: white;
+    color: brown;
+}
+
+.list-style-1 li i {
+    color: #a60404;
+}
+
+.section-title .pre-title {
+    color: #a60404;
+}
+
+.bg-color-primary {
+    background-color: #666967 !important;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.icon-checkbox-circle-fill-solid {
+    font-size: 30px;
+}
+
+.list-style-1 li {
+
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.list-style-1 {
+    list-style: none;
+    padding: 0;
+
+}
+
+.checkbox-list {
+    list-style: none;
+    padding: 0;
+}
+
+.checkbox-list .icon-checkbox-circle-fill-solid {
+    font-size: 18px;
+}
+
+.list-style-1 li {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 28px;
+    background-image: linear-gradient(to right, #d0cfcf, #fffffa);
+    border-radius: 10px;
+    color: black !important;
+    text-align: left;
+}
+
+.feature-list-wrapper {
+    padding: 25px;
+}
+
+
+#countdown-timer {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 50px;
+    color: white !important
+}
+
+#countdown-timer-two {
+    font-size: 14px;
+    font-weight: bold;
+    color: white !important
+}
+
+@media (max-width: 767px) {
+    .list-style-1 li {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+
+    .heading-mobile {
+
+        font-size: 14px;
+        margin-top: 7px;
+    }
+
+    .white-box-icon {
+
+        width: 30px;
+    }
+
+    /* #video-source{
+            width: 350px;
+           } */
+
+}
+
+.callBtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 9999;
+    background: brown !important;
+    color: white !important;
+}
+
+.trin-trin {
+    animation-name: trin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.icon-phone-line {
+
+    background-repeat: no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+
+@keyframes trin {
+
+    from {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    20%,
+    32%,
+    44%,
+    56%,
+    68% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    23%,
+    35%,
+    47%,
+    59%,
+    71% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    26%,
+    38%,
+    50%,
+    62%,
+    74% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    29%,
+    41%,
+    53%,
+    65%,
+    77% {
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+}
+
+.animated-button1 {
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #a60404;
+    color: white;
+    display: inline-block;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    overflow: hidden;
+}
+
+.animated-button1::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #ad8585;
+    opacity: 0;
+    -webkit-transition: .2s opacity ease-in-out;
+    transition: .2s opacity ease-in-out;
+}
+
+.animated-button1:hover::before {
+    opacity: 0.2;
+}
+
+.animated-button1 span {
+    position: absolute;
+}
+ 
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-style-2 .banner-image .round-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.banner-style-2 .banner-image {
+    position: relative;
+    padding: 35px;
+    left: 115px;
+}
+
+.banner-style-2 .banner-image .thumbnail img {
+    width: 500px;
+    max-height: 500px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.banner-style-2 .banner-image .learner-badge {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: -48px;
+    top: 30%;
+}
+
+.banner-style-2 .banner-image .learner-badge .badge-inner {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge .badge-inner span.viewer {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge .badge-inner span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.banner-style-2 .banner-image .learner-badge .badge-inner span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge1 {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: 79px;
+    top: 79%;
+}
+
+.banner-style-2 .banner-image .learner-badge1 .badge-inner1 {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge1 .badge-inner1 span.viewer1 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge1 .badge-inner1 span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge1 .badge-inner1 span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+
+.banner-style-2 .banner-image .learner-badge2 {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: 373px;
+    top: 79%;
+}
+
+.banner-style-2 .banner-image .learner-badge2 .badge-inner2 {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge2 .badge-inner2 span.viewer2 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge2 .badge-inner2 span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge2 .badge-inner2 span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+
+.banner-style-2 .banner-image .learner-badge3 {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: 475px;
+    top: 30%;
+}
+
+.banner-style-2 .banner-image .learner-badge3 .badge-inner3 {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge3 .badge-inner3 span.viewer3 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge3 .badge-inner3 span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge3 .badge-inner3 span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+
+.banner-style-2 .banner-image .learner-badge4 {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: 103px;
+    top: -10%;
+}
+
+.banner-style-2 .banner-image .learner-badge4 .badge-inner4 {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge4 .badge-inner4 span.viewer4 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge4 .badge-inner4 span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge4 .badge-inner4 span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+
+
+.banner-style-2 .banner-image .learner-badge5 {
+    background: #fd723c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    position: absolute;
+    left: 216px;
+  top: -12%;
+}
+
+.banner-style-2 .banner-image .learner-badge5 .badge-inner5 {
+    background: #fff;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-style-2 .banner-image .learner-badge5 .badge-inner5 span.viewer5 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.banner-style-2 .banner-image .learner-badge5 .badge-inner5 span {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.banner-style-2 .banner-image .learner-badge5 .badge-inner5 span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .banner-style-2 .banner-image {
+        padding: 25px;
+        left: 10px;
+        transform: scale(0.9); 
+    } 
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-style-2 .banner-image {
+        left: 0;
+        width: 74%;
+        margin: 0 auto; 
+    } 
+}
+@media only screen and (max-width: 767px) {
+    .banner-style-2 .banner-image {
+        left: 0;
+        margin: 0 auto;
+        padding: 30px; 
+    } 
+}
+@media only screen and (max-width: 575px) {
+    .banner-style-2 .banner-image {
+        padding: 60px; 
+    } 
+}
+@media only screen and (max-width: 575px) {
+    .banner-style-2 .banner-image .learner-badge {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        left: -16px;
+    top: 25%;
+    } 
+    .banner-style-2 .banner-image .learner-badge1 {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        top: 74%;
+    left: 56px;
+    }
+    .banner-style-2 .banner-image .learner-badge2 {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        left: 238px;
+        top: 74%;
+    }
+    .banner-style-2 .banner-image .learner-badge3 {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        left: 292px;
+        top: 25%;
+    }
+    .banner-style-2 .banner-image .learner-badge4 {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        left: 66px;
+        top: -5%;
+    }
+
+    .banner-style-2 .banner-image .learner-badge5 {
+        padding:5px;
+        width: 100px;
+        height: 100px;
+        left: 147px;
+    top: -9%;
+    }
+    .banner-style-2 .banner-image .learner-badge .badge-inner span.viewer{
+        font-size:14px;
+        line-height: 8px;
+    }
+    .banner-style-2 .banner-image .learner-badge1 .badge-inner1 span.viewer1{
+        font-size:14px;
+        line-height: 8px;
+    }
+    .banner-style-2 .banner-image .learner-badge2 .badge-inner2 span.viewer2{
+        font-size:14px;
+        line-height: 8px;
+    }
+    .banner-style-2 .banner-image .learner-badge3 .badge-inner3 span.viewer3{
+        font-size:14px;
+        line-height: 8px;
+    }
+    .banner-style-2 .banner-image .learner-badge4 .badge-inner4 span.viewer4{
+        font-size:14px;
+        line-height: 8px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge5 .badge-inner5 span.viewer5{
+        font-size:14px;
+        line-height: 8px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge .badge-inner span{
+        text-align: center;
+    }
+    .banner-style-2 .banner-image .learner-badge4 .badge-inner4 span {
+       
+        font-size: 14px;
+    }
+
+
+    .banner-style-2 .banner-image .learner-badge5 .badge-inner5 span {
+       
+        font-size: 14px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge .badge-inner span {
+       
+        font-size: 14px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge1 .badge-inner1 span {
+       
+        font-size: 14px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge2 .badge-inner2 span {
+       
+        font-size: 14px;
+    }
+
+    .banner-style-2 .banner-image .learner-badge3 .badge-inner3 span {
+       
+        font-size: 14px;
+    }
+}
+    
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    /* font-size: 60px; */
+}
+.waviy span {
+    position: relative;
+    display: inline-block; 
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+
+.apply-now-btnanimation {
+    position: relative;
+}
+
+  .apply-now-btnanimation span {
+    position: relative;
+    display: inline-block; 
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }

@@ -1,0 +1,2659 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- ==============================================
+        Basic Page Needs
+        =============================================== -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <!-- Google Tag Manager -->
+
+    <!-- End Google Tag Manager  -->
+
+    <title>
+        Study Blockchain and Technology | Future-Ready Skills 
+    </title>
+
+    <meta
+      name="description"
+      content="Join the Online Blockchain and Technology Diploma Program. Master blockchain development, smart contracts, and decentralized systems from anywhere."
+    />
+    <meta name="subject" content=" " />
+    <meta name="author" content="Codings" />
+
+    <!-- ==============================================
+        Favicons
+        =============================================== -->
+    <link rel="shortcut icon" href="assets/images/icon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/images/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/images/apple-touch-icon-114x114.png"
+    />
+
+    <!-- ==============================================
+        Vendor Stylesheet
+        =============================================== -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/slider.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/vendor/icons.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/animation.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/gallery.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- ==============================================
+        Custom Stylesheet
+        =============================================== -->
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/theme-pink.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/css/intlTelInput.css"
+    />
+
+    <style>
+      /* Basic styles */
+
+      /* Styles for the modal */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #f5f5f5;
+        padding: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        z-index: 10000;
+        width: 90%;
+        max-width: 500px;
+        height: 400px;
+        border-radius: 8px;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    </style>
+    <style>
+      .iti {
+        /* display: block !important; */
+        width: 100%;
+      }
+      .field-phone {
+        padding-left: 100px !important;
+      }
+
+      .iti__selected-country {
+        background: #f5f5f5;
+      }
+
+      /* Styles for small screens menu tab*/
+      @media (max-width: 768px) {
+        .tab-ul {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.9);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: 1000;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .tab-ul.show {
+          display: flex;
+        }
+
+        .tab-list a {
+          color: #fff;
+          font-size: 20px;
+          padding: 15px;
+        }
+
+        .menu-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          background: #111111;
+          color: #fff;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 120px;
+          margin: 3px;
+        }
+
+        .menu-btn i {
+          font-size: 22px;
+        }
+
+        .menu-container {
+          position: sticky;
+          display: flex;
+          justify-content: center;
+          top: 79px;
+          z-index: 999;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Close button inside the menu */
+        .close-menu {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        .tab-list {
+          border: none;
+        }
+      }
+    </style>
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .primary-button {
+        z-index: 0;
+      }
+    </style>
+
+    <!-- ==============================================
+        Theme Settings
+        =============================================== -->
+    <style>
+      :root {
+        --header-bg-color: #111111;
+        --nav-item-color: #f5f5f5;
+        --top-nav-item-color: #f5f5f5;
+        --hero-bg-color: #000000;
+
+        --section-1-bg-color: #f5f5f5;
+        --section-2-bg-color: #111111;
+        --section-3-bg-color: #f5f5f5;
+
+        --footer-bg-color: #191919;
+      }
+
+      .content input {
+        display: none;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .content .list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-right: 50px;
+      }
+
+      .content .list label {
+        cursor: pointer;
+        line-height: 60px;
+        font-size: 22px;
+        font-weight: 500;
+        padding-right: 10px;
+        padding-left: 25px;
+        transition: all 0.5s ease;
+        z-index: 10;
+      }
+
+      #program-spec:checked ~ .list label.program-spec,
+      #program-module:checked ~ .list label.program-module,
+      #uk-levels:checked ~ .list label.uk-levels,
+      #how-to-apply:checked ~ .list label.how-to-apply,
+      #program-fees:checked ~ .list label.program-fees,
+      #admission-requirement:checked ~ .list label.admission-requirement,
+      #accreditation:checked ~ .list label.accreditation,
+      #outcome:checked ~ .list label.outcome {
+        color: #fff;
+      }
+
+      .content .slider {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+        width: 100%;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+
+        background: brown;
+      }
+
+      #program-spec:checked ~ .list .slider {
+        top: 0;
+      }
+
+      #program-module:checked ~ .list .slider {
+        top: 60px;
+      }
+
+      #outcome:checked ~ .list .slider {
+        top: 120px;
+      }
+
+      .content .text-content {
+        width: 60%;
+        height: 100%;
+      }
+
+      .content .text {
+        display: none;
+      }
+
+      .content .text .title {
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .container .text p {
+        text-align: justify;
+      }
+
+      .content .text-content .program-spec {
+        display: block;
+      }
+
+      #program-spec:checked ~ .text-content .program-spec,
+      #program-module:checked ~ .text-content .program-module,
+      #uk-levels:checked ~ .text-content .uk-levels,
+      #how-to-apply:checked ~ .text-content .how-to-apply,
+      #program-fees:checked ~ .text-content .program-fees,
+      #admission-requirement:checked ~ .text-content .admission-requirement,
+      #accreditation:checked ~ .text-content .accreditation,
+      #outcome:checked ~ .text-content .outcome {
+        display: block;
+      }
+
+      #program-module:checked ~ .text-content .program-spec,
+      #uk-levels:checked ~ .text-content .program-spec,
+      #how-to-apply:checked ~ .text-content .program-spec,
+      #program-fees:checked ~ .text-content .program-spec,
+      #admission-requirement:checked ~ .text-content .program-spec,
+      #accreditation:checked ~ .text-content .program-spec,
+      #outcome:checked ~ .text-content .program-spec {
+        display: none;
+      }
+
+      .content .list label:hover {
+        color: brown;
+      }
+
+      :root {
+        --ring-size: calc(min(200px, 14vw));
+        --ring-border-size: calc(var(--ring-size) * 0.1);
+        --ring-offset-left: calc(var(--ring-size) + var(--ring-border-size));
+        --ring-offset-top: calc(
+          (var(--ring-size) - var(--ring-border-size)) * 0.5
+        );
+
+        --logo-size-w: calc(
+          (var(--ring-size) * 3 + var(--ring-border-size) * 2) * 1.5
+        );
+        --logo-size-h: calc(
+          (var(--ring-size) * 1.5 - var(--ring-border-size) * 0.5) * 2
+        );
+        --logo-bg-color: #f1f1f1;
+      }
+      .header-wrapper {
+        margin: 50px 0px 0 0;
+        position: relative;
+      }
+
+      .gallery-box {
+        height: calc(var(--logo-size-h) * 1.25);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr calc(var(--logo-size-w) * 0.6) 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "p6 p6 p6 p6 . p5 p5 p4 p4"
+          "p6 p6 p6 p6 . p5 p5 p4 p4"
+          "p1 p1 p7 p7 . p2 p2 p2 p3"
+          "p1 p1 p8 p8 . p2 p2 p2 p3";
+      }
+
+      .i1 {
+        background: url("./assets/images/gal1.webp");
+        grid-area: p1;
+      }
+
+      .i2 {
+        background: url("./assets/images/gal2.webp");
+        grid-area: p2;
+      }
+
+      .i3 {
+        background: url("./assets/images/gal3.webp");
+        grid-area: p3;
+      }
+
+      .i4 {
+        background: url("./assets/images/gal4.webp");
+        grid-area: p4;
+      }
+
+      .i5 {
+        background: url("./assets/images/gal5.webp");
+        grid-area: p5;
+      }
+
+      .i6 {
+        background: url("./assets/images/gal6.webp");
+        grid-area: p6;
+      }
+
+      .i7 {
+        background: url("./assets/images/gal7.webp");
+        grid-area: p7;
+      }
+
+      .i8 {
+        background: url("./assets/images/gal8.webp");
+        grid-area: p8;
+      }
+
+      .photo {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .dwc-logo {
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        background: linear-gradient(to bottom, #fff, #fff);
+        width: calc(var(--logo-size-w) * 1);
+        height: calc(var(--logo-size-h) * 1.25);
+        margin: 0 auto;
+        padding: 20px 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .olympic-rings {
+        position: relative;
+        width: calc(var(--ring-size) * 3 + var(--ring-border-size) * 2);
+        height: calc(var(--ring-size) * 1.5 - var(--ring-border-size) * 0.5);
+        margin: 158px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K6X9DPPX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header id="header">
+      <!-- Navbar -->
+      <nav
+        data-aos="zoom-out"
+        data-aos-delay="800"
+        class="navbar navbar-expand"
+      >
+        <div class="container header">
+          <!-- Navbar Brand-->
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/Logo-N.png" alt=" ASTI Academy " />
+            <!-- 
+                            Custom Logo
+                            <img src="assets/images/logo.svg" alt="Leverage">
+                        -->
+          </a>
+
+          <!-- Nav holder -->
+          <div class="ml-auto"></div>
+
+          <!-- Navbar Items -->
+          <ul class="navbar-nav items">
+            <li class="nav-item dropdown">
+              <a href="about.html" class="nav-link">About Us </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="/programs.html" class="nav-link">
+                Programs <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <b class="mx-3">Accounting and Finance Training</b>
+                <li class="nav-item dropdown pb-2">
+                  <a class="nav-link" href="oracle-financials-training-course-in-UAE.html">
+                    Oracle Financials Programme
+                  </a>
+                </li>
+            
+                <b class="mx-3">Management Training</b>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-online-blockchain-and-technology-diploma-program.html">
+                    Blockchain Technology Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown pb-2">
+                  <a class="nav-link" href="study-online-property-management-diploma.html">
+                    Property Management Programme
+                  </a>
+                </li>
+            
+                <b class="mx-3">Architecture and Design Training</b>
+                <li class="nav-item dropdown pb-2">
+                  <a class="nav-link" href="study-online-design-engineering-program.html">
+                    Design Engineering Programme
+                  </a>
+                </li>
+            
+                <b class="mx-3">Construction, Mechanical & Built Environment Skills Training</b>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-artificial-intelligence-diploma-program.html">
+                    Artificial Intelligence Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="online-biomedical-engineering-diploma-program.html">
+                    Biomedical Engineering Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="online-chemical-engineering-diploma.html">
+                    Chemical Engineering Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="online-mechatronics-engineering-diploma-program.html">
+                    Mechatronics Engineering Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-online-petroleum-engineering-diploma-program.html">
+                    Petroleum Engineering Programme
+                  </a>
+                </li>
+                <li class="nav-item dropdown pb-2">
+                  <a class="nav-link" href="online-quantity-survey-engineering-diploma.html">
+                    Quantity Surveying Engineering Programme
+                  </a>
+                </li>
+            
+                <b class="mx-3">Other Courses</b>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-online-data-analysis-course.html">
+                    Data Analysis Training Course
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-online-data-science-with-ai.html">
+                    Data Science with AI Training Course
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="online-electrical-vehicle-engineering-course.html">
+                    Electrical Vehicle Engineering Course
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="study-online-python-web-development-course.html">
+                    Python Web Development Course
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a href="contact.html" class="nav-link">Contact Us </a>
+            </li>
+          </ul>
+
+          <!-- Navbar Toggle -->
+          <ul class="navbar-nav toggle">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="modal"
+                data-target="#menu"
+              >
+                <i class="icon-menu m-0"></i>
+              </a>
+            </li>
+          </ul>
+
+             <!-- Navbar Action -->
+             <ul class="navbar-nav action">
+              <li class="nav-item ml-3">
+                <a
+                  href="#contact"
+                  target="_blank"
+                  class="btn ml-lg-auto primary-button"
+                  ><i class="icon-rocket"></i>Talk to our Advisor</a
+                >
+                &nbsp;
+                <a
+                  href="https://form.jotform.com/registrationsdwc/student-application-form"
+                  class="btn ml-lg-auto primary-button"
+                  >Login</a
+                >
+                <!-- 
+                                  Suggestion: Replace the purchase button above with a contact button.
+                                  
+                                  <a href="#contact" class="smooth-anchor btn ml-lg-auto primary-button"><i class="icon-rocket"></i>CONTACT US</a>
+                              -->
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="social-button">
+      <button class="btn firstbtn">Call Now</button>
+      <a href="tel:+971563630333" class="scheduleBtn right-menubar"
+        ><i class="fa fa-phone phone"></i
+      ></a>
+
+      <button class="btn thirdbtn">WhatsApp</button>
+      <a href="https://wa.link/u4n8sz" class="whatsappBtn"
+        ><i class="fab fa-whatsapp whatsapp"></i
+      ></a>
+
+      <button class="btn fourthbtn">Enquiry Now</button>
+      <a href="#contact" class="enquiryBtn"
+        ><i class="fa fa-envelope envelope"></i
+      ></a>
+
+      <button class="btn sixthbtn">Enroll Now</button>
+      <a
+        href="https://form.jotform.com/registrationsdwc/student-application-form"
+        class="applyBtn"
+      >
+        <i class="fa-duotone fa-solid fa-file-import applynow"></i>
+      </a>
+    </div>
+    <!-- Hero -->
+    <section id="slider" class="hero p-0 odd">
+      <div class="swiper-container no-slider slider-h-75">
+        <div class="swiper-wrapper">
+          <!-- Item 1 -->
+          <div class="swiper-slide slide-center">
+            <img
+              src="assets/images/programs-banner/webp/Education and training.webp"
+              class="full-image"
+              data-mask="70"
+            />
+
+            <div class="slide-content row text-center">
+              <div class="col-12 mx-auto inner">
+                <h1
+                  data-aos="zoom-out-up"
+                  data-aos-delay="400"
+                  class="title effect-static-text"
+                  style="font-size: 3rem !important"
+                >
+                Blockchain Technology Program
+                </h1>
+                <h6>                Explore the Future of Digital Innovation with Blockchain & Technology
+                </h6>
+              </div>
+              <!--<div class="col-12 row align-items-center justify-content-center">-->
+              <!--  <button-->
+              <!--    type="button"-->
+              <!--    class="btn primary-button"-->
+              <!--    id="open-modal"-->
+              <!--  >-->
+              <!--    Download Brochure-->
+              <!--    <i class="icon-arrow-down-circle left"></i>-->
+              <!--  </button>-->
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fun Facts -->
+    <section id="funfacts" class="section-3" style="padding: 0px 0 !important">
+      <div class="container">
+        <div class="row divided-list">
+          <div class="col-md-4 divided-col">
+            <div class="divided-col-item">
+              <h4>Mode of Study</h4>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="col-md-4 divided-col">
+            <div class="divided-col-item">
+              <h4>Program Duration</h4>
+              <span>3 Months</span>
+            </div>
+          </div>
+          <div class="col-md-4 divided-col">
+            <div class="divided-col-item">
+              <h4>Program Fee</h4>
+              <span>299$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About [image] -->
+    <section id="about" class="section-1 highlights image-right">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 col-md-6 align-self-center text-center text-md-left"
+          >
+            <div class="row intro">
+              <div class="col-12 p-0">
+                <h3 class="featured alt">
+                    What You Will Achieve from the Online Blockchain and Technology Diploma Program
+                </h3>
+                <p style="text-align: justify">
+                    A thorough foundation in one of the 21st century's most disruptive technologies is provided by the Online Blockchain and Technology Diploma Program. Your knowledge of blockchain architecture, consensus processes, bitcoin, smart contracts, and Hyperledger Fabric will all be enhanced by this training. You will acquire the skills necessary to create and oversee decentralized systems through practical experience and real-world applications, preparing you for positions in fintech, cybersecurity, logistics, and other fields.
+                </p>
+                <a href="/contact.html" class="btn primary-button button"
+                >Learn More</a
+              >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <a href="assets/images/programs/webp/education and training.webp">
+              <img
+                src="assets/images/programs/webp/education and training.webp"
+                class="fit-image"
+                alt="About Us"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-1" style="background-color: #fff; padding: 40px 0">
+      <!-- Sticky Menu Button for Small Screens -->
+      <div class="menu-container d-md-none">
+        <div class="menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i> Menu
+        </div>
+        <div
+          class="menu-btn"
+          onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Enroll Now
+        </div>
+      </div>
+
+      <!-- Desktop Tab Menu -->
+      <div
+        class="row mt--40 nav-sticky sticky-top d-none d-md-block z-0"
+        style="top: 84px"
+      >
+        <div class="col-12 col-md-12 align-self-center text-center">
+          <main>
+            <ul class="tab-ul">
+              <li class="tab-list">
+                <a href="#section1"><span>Overview</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section2"> <span>Objective</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section3"><span>Module</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section4"> <span>specification</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section5"><span>Learning outcomes</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section6"><span>Skills Covered</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section7"><span>Accreditations</span> </a>
+              </li>
+              <li class="tab-list">
+                <a href="#section8"><span>FAQ</span> </a>
+              </li>
+            </ul>
+          </main>
+        </div>
+      </div>
+
+         <!-- Mobile Fullscreen Menu -->
+         <ul class="tab-ul d-md-none" id="mobileMenu">
+          <span class="close-menu" onclick="closeMenu()">✖</span>
+          <li class="tab-list">
+            <a href="#section1" onclick="scrollToSection(event)"
+              >Overview</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section2" onclick="scrollToSection(event)"
+              >Objective</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section3" onclick="scrollToSection(event)">Course Module</a>
+          </li>
+          <li class="tab-list">
+            <a href="#section4" onclick="scrollToSection(event)"
+              >Specification</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section5" onclick="scrollToSection(event)"
+              >Learning Outcomes</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section6" onclick="scrollToSection(event)"
+              >Skills Covered</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section7" onclick="scrollToSection(event)"
+              >Accreditations</a
+            >
+          </li>
+          <li class="tab-list">
+            <a href="#section8" onclick="scrollToSection(event)">Faq</a>
+          </li>
+        </ul>
+      <div class="container">
+        <div id="section1" class="content-section">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Course Overview</h3>
+              <p>
+                An in-depth grasp of blockchain technology and its practical applications in a range of industries is offered by this diploma program. It gives students the theoretical and technical know-how required to create decentralized systems, oversee cryptocurrency assets, and create smart contracts with Hyperledger Fabric and Ethereum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="section2" class="content-section">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Course Objective</h3>
+              <ul>
+                <li>
+                    To provide a thorough understanding of blockchain architecture and decentralized networks
+                </li>
+                <li>
+                    To develop competencies in smart contract creation and Ethereum programming
+                </li>
+                <li>
+                    To explore the functionality of cryptocurrency, wallets, and secure transactions
+                </li>
+                <li>
+                    To equip learners with enterprise-level knowledge of Hyperledger Fabric and permissioned blockchains
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="section3" class="content-section">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Program Modules</h3>
+              <div class="table-responsive">
+                <table
+                  class="table table-bordered"
+                  style="
+                    border-collapse: collapse !important;
+                    border-spacing: 0 !important;
+                  "
+                >
+                  <thead class="table-secondary">
+                    <tr>
+                      <th>S.no</th>
+                      <th>Unit Code</th>
+                      <th>Unit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>B/744/5220</td>
+                      <td>INTRODUCTION TO BLOCK CHAIN TECHNOLOGY</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>B/744/5221</td>
+                      <td>CONSENSUS MECHANISM</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>B/744/5222</td>
+                      <td>CRYPTO CURRENCY AND WALLET</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>B/744/5223</td>
+                      <td>SMART CONTRACT AND ETHEREUM</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>B/744/5224</td>
+                      <td>UNDERSTANDING HYPERLEDGER FABRIC</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section4" class="content-section">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Program Specification</h3>
+
+              <div class="table-responsive">
+                <table
+                  class="table table-bordered"
+                  style="
+                    border-collapse: collapse !important;
+                    border-spacing: 0 !important;
+                  "
+                >
+                  <thead class="table-secondary">
+                    <tr>
+                      <th>Qualification Title</th>
+                      <th>Mode of Study</th>
+                      <th>Duration</th>
+                      <th>Assessment</th>
+                      <th>Certification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blockchain Technology Program</td>
+                      <td>100% Online</td>
+                      <td>Flexible (3 months)</td>
+                      <td>Assignments, hands-on projects</td>
+                      <td>Internationally recognized qualification</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row justify-content-center">
+                <a href="/contact.html" class="btn primary-button button"
+                  >Download Brochure</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="section5" class="content-section">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Learning outcomes</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul>
+                    <li>
+                      Understand the fundamentals of blockchain and its architecture
+                    </li>
+                    <li>
+                      Analyze and apply different consensus algorithms (PoW, PoS, etc.)
+                    </li>
+                    <li>
+                      Develop and deploy smart contracts using Solidity and Ethereum tools
+                    </li>
+                    <li>
+                      Gain hands-on skills in Hyperledger Fabric setup and chain code deployment
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section6" class="content-section pb-5">
+          <div class="row">
+            <div class="col-12 col-md-12 text-md-left mt-5">
+              <h3 class="text-center">Skills Covered</h3>
+              <div class="row justify-content-center">
+                <div class="col-md-5">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Blockchain Fundamentals & Decentralization Principles</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Consensus Mechanisms: PoW, PoS, and Emerging Models</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Cryptocurrency Wallets: Setup, Security, and Transactions</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Smart Contract Development Using Solidity</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Ethereum DApp Deployment</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <img
+                      src="/assets/svg/check-icon.svg"
+                      alt="Icon"
+                      width="26"
+                      height="26"
+                    />
+                    <span class="flex-grow-1 pl-2"
+                      >Hyperledger Fabric Architecture & Network Configuration</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section
+      id="about"
+      class="section-1 highlights image-right"
+      style="padding: 40px 0"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 align-self-center text-center">
+            <div class="row intro">
+              <div class="col-12 p-0">
+                <h3 class="featured alt">UK Level System</h3>
+                <img src="assets/images/uk-level.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Features -->
+    <section
+      id="features"
+      class="section-2 odd offers"
+      style="padding: 40px 0 !important"
+    >
+      <div class="container">
+        <h3 class="text-center">
+          Why Choose ASTI Online for Blockchain Technology Program ?
+        </h3>
+        <div class="row justify-content-center text-center items">
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-globe"></i>
+              <h4>Curriculum Designed by Industry Experts</h4>
+              <p>
+                Learn practical skills that employers are hiring for.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-basket"></i>
+              <h4>100% Online, Anytime Learning</h4>
+              <p> Flexible and accessible from anywhere in the world
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-layers"></i>
+              <h4>Hands-On Blockchain Development</h4>
+              <p>
+                Practice on platforms like Ethereum and Hyperledger.
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-graduation"></i>
+              <h4>Career-Ready Certification</h4>
+              <p>
+                Gain a recognized credential in a high-demand field.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features -->
+
+    <section
+      id="section7"
+      class="section-3 highlights image-right"
+      style="background-color: #fff"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <h3 class="text-center">Our Accreditations & Recognitions</h3>
+            <p>
+              ASTI Academy offers government-approved vocational educational
+              certification programs in Dubai and is recognized and accredited
+              by the Government of Dubai, KHDA, TVET, Ofqual, and other
+              international educational legal authorities.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="row divided-list">
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/wes-logo.png">
+                  <img src="assets/images/wes-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/sce-logo.png">
+                  <img src="assets/images/sce-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/mof-logo.png">
+                  <img src="assets/images/mof-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/khd-logo.png">
+                  <img src="assets/images/khd-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/moh-logo.png">
+                  <img src="assets/images/moh-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/qad-logo.png">
+                  <img src="assets/images/qad-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/ofqual-logo.png">
+                  <img src="assets/images/ofqual-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-3 divided-col"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="divided-col-item" style="margin: 10px; padding: 10px">
+                <a href="assets/images/tvet-logo.png">
+                  <img src="assets/images/tvet-logo.png" alt="About Us" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="features"
+      class="offers"
+      style="background-color: #000 !important; padding: 20px 0"
+    >
+      <div class="container">
+        <div class="row justify-content-center items">
+          <div class="col-12 col-md-12 col-lg-12" style="display: flex">
+            <h4 style="color: #ff0101">
+              We have changed the lives of over 300,000 students since 1995. Now
+              it’s your turn!
+            </h4>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a
+              href="tel:+971549909777"
+              class="btn primary-button"
+            >
+              Call Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section8" class="section-6 subscribe">
+      <div class="container smaller">
+        <div class="row text-center intro">
+          <div class="col-12">
+            <h3>Frequently Asked Questions</h3>
+          </div>
+        </div>
+        <div class="faq-container">
+          <div class="faq">
+            <h5 class="faq-title">
+              What is this program about?
+            </h5>
+            <p class="faq-text">
+              The program teaches the technical, practical, and strategic use of blockchain technology, including cryptocurrency, smart contracts, and enterprise applications.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="faq">
+            <h5 class="faq-title">Is prior coding experience necessary?</h5>
+            <p class="faq-text">
+              Basic IT knowledge is sufficient. Coding concepts like Solidity for Ethereum are taught from scratch.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="faq">
+            <h5 class="faq-title">What kind of jobs can I get after this diploma?</h5>
+            <p class="faq-text">
+              You can pursue roles such as Blockchain Developer, Smart Contract Engineer, Crypto Analyst, or Hyperledger Consultant.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="faq">
+            <h5 class="faq-title">
+              Is this a certified course?
+            </h5>
+            <p class="faq-text">
+              Yes, you'll receive a recognized diploma certificate upon successful completion.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="faq">
+            <h5 class="faq-title">
+              Is the course fully online?
+            </h5>
+            <p class="faq-text">
+              Yes, it's designed to be 100% online, with interactive sessions, video lectures, and support.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="faq">
+            <h5 class="faq-title">
+              What tools will I learn?
+            </h5>
+            <p class="faq-text">
+              You will gain experience with Ethereum, Solidity, Hyperledger Fabric, Remix IDE, Truffle, Ganache, and wallets like MetaMask.
+            </p>
+            <button class="faq-toggle">
+              <svg
+                class="chevron w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                />
+              </svg>
+
+              <svg
+                class="close w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features -->
+    <section id="features" class="section-3" style="background-color: #fff">
+      <div class="container">
+        <div class="row text-center intro">
+          <div class="col-12">
+            <h3>
+              What are the 4 reasons to Study Online Blockchain Technology Program
+              ?
+            </h3>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center items">
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-globe"></i>
+              <h4>Blockchain is the Future</h4>
+              <p>Gain relevant skills in a rapidly growing and high-paying tech sector.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-basket"></i>
+              <h4>Hands-On, Career-Focused Learning</h4>
+              <p>Build real applications that demonstrate your ability.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-screen-smartphone"></i>
+              <h4>Flexible Learning Format</h4>
+              <p>Ideal for working professionals and tech enthusiasts.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 item">
+            <div class="card no-hover">
+              <i class="icon icon-layers"></i>
+              <h4 style="white-space: nowrap">Applicable Across Industries</h4>
+              <p>
+                From finance to logistics, blockchain is reshaping business models.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      id="testimonials"
+      class="section-3 carousel"
+      style="background-color: #fff"
+    >
+      <div class="overflow-holder">
+        <div class="container">
+          <div class="row text-center intro">
+            <div class="col-12">
+              <h3>Testimonials</h3>
+            </div>
+          </div>
+          <div class="swiper-container mid-slider items">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-center text-center item">
+                <div class="row card">
+                  <div class="col-12">
+                    <img
+                      src="assets/images/testimonial/18.webp"
+                      alt="Adams Baker"
+                      class="person"
+                    />
+                    <h4>Sara M</h4>
+                    <p style="text-align: justify">
+                      This course made a complex subject easy to learn. I’ve already built my first smart contract!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-center text-center item">
+                <div class="row card">
+                  <div class="col-12">
+                    <img
+                      src="assets/images/testimonial/12.webp"
+                      alt="Mary Evans"
+                      class="person"
+                    />
+                    <h4>Khalid M/h4>
+                    <p style="text-align: justify">
+                      Loved the mix of Ethereum coding and Hyperledger enterprise solutions. Highly recommend it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-center text-center item">
+                <div class="row card">
+                  <div class="col-12">
+                    <img
+                      src="assets/images/testimonial/19.webp"
+                      alt="Nadia Malik"
+                      class="person"
+                    />
+                    <h4>Fatima S</h4>
+                    <p style="text-align: justify">
+                      I joined with no coding background and now I understand wallets, tokens, and contract security.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-center text-center item">
+                <div class="row card">
+                  <div class="col-12">
+                    <img
+                      src="assets/images/testimonial/13.webp"
+                      alt="Khalid Mansoor"
+                      class="person"
+                    />
+                    <h4>Omar T</h4>
+                    <p style="text-align: justify">
+                      ASTI’s support system and instructor guidance were very helpful throughout the course. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-center text-center item">
+                <div class="row card">
+                  <div class="col-12">
+                    <img
+                      src="assets/images/Comments_68-x-68_6.png"
+                      alt="Sara Khan"
+                      class="person"
+                    />
+                    <h4>Ayesha R</h4>
+                    <p style="text-align: justify">
+                      I was working in finance, but this course helped me switch to crypto consulting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section-7">
+      <div class="container">
+        <form id="hubspot-form-3">
+          <div class="row align-items-center">
+            <div
+              class="col-12 col-md-6 align-self-start text-center text-md-left"
+            >
+              <!-- Steps Message -->
+              <div class="row intro form-content">
+                <div class="col-12 p-0">
+                  <!-- Step Title -->
+                  <div class="step-title">
+                    <h2 class="featured alt">
+                      Take Your Career To The Next Level
+                    </h2>
+                    <p>
+                      Don't wait until tomorrow. Talk to one of our consultants
+                      today and learn how to start leveraging your business.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Steps Group -->
+              <div class="row text-center form-content">
+                <div class="col-12 p-0">
+                  <!-- Group 1 -->
+                  <fieldset class="step-group">
+                    <div class="row">
+                      <div class="col-12 input-group p-0">
+                        <input
+                          type="text"
+                          name="firstname-1"
+                          data-minlength="3"
+                          class="form-control field-name"
+                          placeholder="Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 input-group p-0">
+                        <input
+                          type="email"
+                          name="email-1"
+                          data-minlength="3"
+                          class="form-control field-email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 input-group p-0">
+                        <input
+                          type="text"
+                          id="phone-2"
+                          name="phone-1"
+                          data-minlength="3"
+                          class="form-control field-phone"
+                          placeholder="Phone"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 input-group p-0">
+                        <select
+                          class="form-control"
+                          id="country_of_residence"
+                          name="country_of_residence"
+                          required
+                        >
+                          <option value="">Select Country</option>
+                          <option value="Afghanistan">Afghanistan</option>
+                          <option value="Albania">Albania</option>
+                          <option value="Algeria">Algeria</option>
+                          <option value="American Samoa">American Samoa</option>
+                          <option value="Andorra">Andorra</option>
+                          <option value="Angola">Angola</option>
+                          <option value="Anguilla">Anguilla</option>
+                          <option value="Antartica">Antarctica</option>
+                          <option value="Antigua and Barbuda">
+                            Antigua and Barbuda
+                          </option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Armenia">Armenia</option>
+                          <option value="Aruba">Aruba</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Austria">Austria</option>
+                          <option value="Azerbaijan">Azerbaijan</option>
+                          <option value="Bahamas">Bahamas</option>
+                          <option value="Bahrain">Bahrain</option>
+                          <option value="Bangladesh">Bangladesh</option>
+                          <option value="Barbados">Barbados</option>
+                          <option value="Belarus">Belarus</option>
+                          <option value="Belgium">Belgium</option>
+                          <option value="Belize">Belize</option>
+                          <option value="Benin">Benin</option>
+                          <option value="Bermuda">Bermuda</option>
+                          <option value="Bhutan">Bhutan</option>
+                          <option value="Bolivia">Bolivia</option>
+                          <option value="Bosnia and Herzegowina">
+                            Bosnia and Herzegowina
+                          </option>
+                          <option value="Botswana">Botswana</option>
+                          <option value="Bouvet Island">Bouvet Island</option>
+                          <option value="Brazil">Brazil</option>
+                          <option value="British Indian Ocean Territory">
+                            British Indian Ocean Territory
+                          </option>
+                          <option value="Brunei Darussalam">
+                            Brunei Darussalam
+                          </option>
+                          <option value="Bulgaria">Bulgaria</option>
+                          <option value="Burkina Faso">Burkina Faso</option>
+                          <option value="Burundi">Burundi</option>
+                          <option value="Cambodia">Cambodia</option>
+                          <option value="Cameroon">Cameroon</option>
+                          <option value="Canada">Canada</option>
+                          <option value="Cape Verde">Cape Verde</option>
+                          <option value="Cayman Islands">Cayman Islands</option>
+                          <option value="Central African Republic">
+                            Central African Republic
+                          </option>
+                          <option value="Chad">Chad</option>
+                          <option value="Chile">Chile</option>
+                          <option value="China">China</option>
+                          <option value="Christmas Island">
+                            Christmas Island
+                          </option>
+                          <option value="Cocos Islands">
+                            Cocos (Keeling) Islands
+                          </option>
+                          <option value="Colombia">Colombia</option>
+                          <option value="Comoros">Comoros</option>
+                          <option value="Congo">Congo</option>
+                          <option value="Congo">
+                            Congo, the Democratic Republic of the
+                          </option>
+                          <option value="Cook Islands">Cook Islands</option>
+                          <option value="Costa Rica">Costa Rica</option>
+                          <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                          <option value="Croatia">Croatia (Hrvatska)</option>
+                          <option value="Cuba">Cuba</option>
+                          <option value="Cyprus">Cyprus</option>
+                          <option value="Czech Republic">Czech Republic</option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="Djibouti">Djibouti</option>
+                          <option value="Dominica">Dominica</option>
+                          <option value="Dominican Republic">
+                            Dominican Republic
+                          </option>
+                          <option value="East Timor">East Timor</option>
+                          <option value="Ecuador">Ecuador</option>
+                          <option value="Egypt">Egypt</option>
+                          <option value="El Salvador">El Salvador</option>
+                          <option value="Equatorial Guinea">
+                            Equatorial Guinea
+                          </option>
+                          <option value="Eritrea">Eritrea</option>
+                          <option value="Estonia">Estonia</option>
+                          <option value="Ethiopia">Ethiopia</option>
+                          <option value="Falkland Islands">
+                            Falkland Islands (Malvinas)
+                          </option>
+                          <option value="Faroe Islands">Faroe Islands</option>
+                          <option value="Fiji">Fiji</option>
+                          <option value="Finland">Finland</option>
+                          <option value="France">France</option>
+                          <option value="France Metropolitan">
+                            France, Metropolitan
+                          </option>
+                          <option value="French Guiana">French Guiana</option>
+                          <option value="French Polynesia">
+                            French Polynesia
+                          </option>
+                          <option value="French Southern Territories">
+                            French Southern Territories
+                          </option>
+                          <option value="Gabon">Gabon</option>
+                          <option value="Gambia">Gambia</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Germany">Germany</option>
+                          <option value="Ghana">Ghana</option>
+                          <option value="Gibraltar">Gibraltar</option>
+                          <option value="Greece">Greece</option>
+                          <option value="Greenland">Greenland</option>
+                          <option value="Grenada">Grenada</option>
+                          <option value="Guadeloupe">Guadeloupe</option>
+                          <option value="Guam">Guam</option>
+                          <option value="Guatemala">Guatemala</option>
+                          <option value="Guinea">Guinea</option>
+                          <option value="Guinea-Bissau">Guinea-Bissau</option>
+                          <option value="Guyana">Guyana</option>
+                          <option value="Haiti">Haiti</option>
+                          <option value="Heard and McDonald Islands">
+                            Heard and Mc Donald Islands
+                          </option>
+                          <option value="Holy See">
+                            Holy See (Vatican City State)
+                          </option>
+                          <option value="Honduras">Honduras</option>
+                          <option value="Hong Kong">Hong Kong</option>
+                          <option value="Hungary">Hungary</option>
+                          <option value="Iceland">Iceland</option>
+                          <option value="India">India</option>
+                          <option value="Indonesia">Indonesia</option>
+                          <option value="Iran">
+                            Iran (Islamic Republic of)
+                          </option>
+                          <option value="Iraq">Iraq</option>
+                          <option value="Ireland">Ireland</option>
+                          <option value="Israel">Israel</option>
+                          <option value="Italy">Italy</option>
+                          <option value="Jamaica">Jamaica</option>
+                          <option value="Japan">Japan</option>
+                          <option value="Jordan">Jordan</option>
+                          <option value="Kazakhstan">Kazakhstan</option>
+                          <option value="Kenya">Kenya</option>
+                          <option value="Kiribati">Kiribati</option>
+                          <option value="Democratic People's Republic of Korea">
+                            Korea, Democratic People's Republic of
+                          </option>
+                          <option value="Korea">Korea, Republic of</option>
+                          <option value="Kuwait">Kuwait</option>
+                          <option value="Kyrgyzstan">Kyrgyzstan</option>
+                          <option value="Lao">
+                            Lao People's Democratic Republic
+                          </option>
+                          <option value="Latvia">Latvia</option>
+                          <option value="Lebanon">Lebanon</option>
+                          <option value="Lesotho">Lesotho</option>
+                          <option value="Liberia">Liberia</option>
+                          <option value="Libyan Arab Jamahiriya">
+                            Libyan Arab Jamahiriya
+                          </option>
+                          <option value="Liechtenstein">Liechtenstein</option>
+                          <option value="Lithuania">Lithuania</option>
+                          <option value="Luxembourg">Luxembourg</option>
+                          <option value="Macau">Macau</option>
+                          <option value="Macedonia">
+                            Macedonia, The Former Yugoslav Republic of
+                          </option>
+                          <option value="Madagascar">Madagascar</option>
+                          <option value="Malawi">Malawi</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Maldives">Maldives</option>
+                          <option value="Mali">Mali</option>
+                          <option value="Malta">Malta</option>
+                          <option value="Marshall Islands">
+                            Marshall Islands
+                          </option>
+                          <option value="Martinique">Martinique</option>
+                          <option value="Mauritania">Mauritania</option>
+                          <option value="Mauritius">Mauritius</option>
+                          <option value="Mayotte">Mayotte</option>
+                          <option value="Mexico">Mexico</option>
+                          <option value="Micronesia">
+                            Micronesia, Federated States of
+                          </option>
+                          <option value="Moldova">Moldova, Republic of</option>
+                          <option value="Monaco">Monaco</option>
+                          <option value="Mongolia">Mongolia</option>
+                          <option value="Montserrat">Montserrat</option>
+                          <option value="Morocco">Morocco</option>
+                          <option value="Mozambique">Mozambique</option>
+                          <option value="Myanmar">Myanmar</option>
+                          <option value="Namibia">Namibia</option>
+                          <option value="Nauru">Nauru</option>
+                          <option value="Nepal">Nepal</option>
+                          <option value="Netherlands">Netherlands</option>
+                          <option value="Netherlands Antilles">
+                            Netherlands Antilles
+                          </option>
+                          <option value="New Caledonia">New Caledonia</option>
+                          <option value="New Zealand">New Zealand</option>
+                          <option value="Nicaragua">Nicaragua</option>
+                          <option value="Niger">Niger</option>
+                          <option value="Nigeria">Nigeria</option>
+                          <option value="Niue">Niue</option>
+                          <option value="Norfolk Island">Norfolk Island</option>
+                          <option value="Northern Mariana Islands">
+                            Northern Mariana Islands
+                          </option>
+                          <option value="Norway">Norway</option>
+                          <option value="Oman">Oman</option>
+                          <option value="Pakistan">Pakistan</option>
+                          <option value="Palau">Palau</option>
+                          <option value="Panama">Panama</option>
+                          <option value="Papua New Guinea">
+                            Papua New Guinea
+                          </option>
+                          <option value="Paraguay">Paraguay</option>
+                          <option value="Peru">Peru</option>
+                          <option value="Philippines">Philippines</option>
+                          <option value="Pitcairn">Pitcairn</option>
+                          <option value="Poland">Poland</option>
+                          <option value="Portugal">Portugal</option>
+                          <option value="Puerto Rico">Puerto Rico</option>
+                          <option value="Qatar">Qatar</option>
+                          <option value="Reunion">Reunion</option>
+                          <option value="Romania">Romania</option>
+                          <option value="Russia">Russian Federation</option>
+                          <option value="Rwanda">Rwanda</option>
+                          <option value="Saint Kitts and Nevis">
+                            Saint Kitts and Nevis
+                          </option>
+                          <option value="Saint LUCIA">Saint LUCIA</option>
+                          <option value="Saint Vincent">
+                            Saint Vincent and the Grenadines
+                          </option>
+                          <option value="Samoa">Samoa</option>
+                          <option value="San Marino">San Marino</option>
+                          <option value="Sao Tome and Principe">
+                            Sao Tome and Principe
+                          </option>
+                          <option value="Saudi Arabia">Saudi Arabia</option>
+                          <option value="Senegal">Senegal</option>
+                          <option value="Seychelles">Seychelles</option>
+                          <option value="Sierra">Sierra Leone</option>
+                          <option value="Singapore">Singapore</option>
+                          <option value="Slovakia">
+                            Slovakia (Slovak Republic)
+                          </option>
+                          <option value="Slovenia">Slovenia</option>
+                          <option value="Solomon Islands">
+                            Solomon Islands
+                          </option>
+                          <option value="Somalia">Somalia</option>
+                          <option value="South Africa">South Africa</option>
+                          <option value="South Georgia">
+                            South Georgia and the South Sandwich Islands
+                          </option>
+                          <option value="Span">Spain</option>
+                          <option value="SriLanka">Sri Lanka</option>
+                          <option value="St. Helena">St. Helena</option>
+                          <option value="St. Pierre and Miguelon">
+                            St. Pierre and Miquelon
+                          </option>
+                          <option value="Sudan">Sudan</option>
+                          <option value="Suriname">Suriname</option>
+                          <option value="Svalbard">
+                            Svalbard and Jan Mayen Islands
+                          </option>
+                          <option value="Swaziland">Swaziland</option>
+                          <option value="Sweden">Sweden</option>
+                          <option value="Switzerland">Switzerland</option>
+                          <option value="Syria">Syrian Arab Republic</option>
+                          <option value="Taiwan">
+                            Taiwan, Province of China
+                          </option>
+                          <option value="Tajikistan">Tajikistan</option>
+                          <option value="Tanzania">
+                            Tanzania, United Republic of
+                          </option>
+                          <option value="Thailand">Thailand</option>
+                          <option value="Togo">Togo</option>
+                          <option value="Tokelau">Tokelau</option>
+                          <option value="Tonga">Tonga</option>
+                          <option value="Trinidad and Tobago">
+                            Trinidad and Tobago
+                          </option>
+                          <option value="Tunisia">Tunisia</option>
+                          <option value="Turkey">Turkey</option>
+                          <option value="Turkmenistan">Turkmenistan</option>
+                          <option value="Turks and Caicos">
+                            Turks and Caicos Islands
+                          </option>
+                          <option value="Tuvalu">Tuvalu</option>
+                          <option value="Uganda">Uganda</option>
+                          <option value="Ukraine">Ukraine</option>
+                          <option value="United Arab Emirates">
+                            United Arab Emirates
+                          </option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States">United States</option>
+                          <option value="United States Minor Outlying Islands">
+                            United States Minor Outlying Islands
+                          </option>
+                          <option value="Uruguay">Uruguay</option>
+                          <option value="Uzbekistan">Uzbekistan</option>
+                          <option value="Vanuatu">Vanuatu</option>
+                          <option value="Venezuela">Venezuela</option>
+                          <option value="Vietnam">Viet Nam</option>
+                          <option value="Virgin Islands (British)">
+                            Virgin Islands (British)
+                          </option>
+                          <option value="Virgin Islands (U.S)">
+                            Virgin Islands (U.S.)
+                          </option>
+                          <option value="Wallis and Futana Islands">
+                            Wallis and Futuna Islands
+                          </option>
+                          <option value="Western Sahara">Western Sahara</option>
+                          <option value="Yemen">Yemen</option>
+                          <option value="Serbia">Serbia</option>
+                          <option value="Zambia">Zambia</option>
+                          <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+
+                        <label id="countryerror"></label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 input-group p-0">
+                        <select
+                        id="course_title-1"
+                        name="course_title-1"
+                        class="form-control"
+                        required
+                      >
+                        <option value="">Select Course</option>
+                        <option value="Artificial Intelligence Program">
+                          Artificial Intelligence Program
+                        </option>
+                        <option value="Biomedical Engineering Program">
+                          Biomedical Engineering Program
+                        </option>
+                        <option value="Blockchain Technology Program">
+                          Blockchain Technology Program
+                        </option>
+                        <option value="Chemical Engineering Course">
+                          Chemical Engineering
+                        </option>
+                        <option value="Data Analysis Training Course">
+                          Data Analysis Training Course
+                        </option>
+                        <option value="Data Science Training Course">
+                          Data Science with AI Training Course
+                        </option>
+                        <option value="Design Engineering Program">
+                          Design Engineering Program
+                        </option>
+                        <option value="Electrical Vehicle Engineering Course">
+                          Electrical Vehicle Engineering Course
+                        </option>
+                        <option value="Mechatronics Engineering Course">
+                          Mechatronics Engineering
+                        </option>
+                        <option value="Oracle Financials Programme">
+                          Oracle Financials Programme
+                        </option>
+                        <option value="Petroleum Engineering Program">
+                          Petroleum Engineering Program
+                        </option>
+                        <option value="Property Management Program">
+                          Property Management Program
+                        </option>
+                        <option value="Python Web Development Course">
+                          Python Web Development Course
+                        </option>
+                        <option value="Quantity Surveying Engineering Programme">
+                          Quantity Surveying Engineering Programme
+                        </option>
+                        
+                      </select>
+                      </div>
+                    </div>
+                    <div class="col-12 input-group p-0">
+                      <button type="submit" class="btn primary-button">
+                        Submit<i class="icon-arrow-right-circle left"></i>
+                      </button>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              class="content-images col-12 col-md-6 pl-md-5 d-none d-md-block"
+            >
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/iQjeI_S0H9s?si=jqa_oQJhu-ZnkpSP"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer-1"></div>
+
+    <!-- Modal [responsive menu] -->
+    <div
+      id="menu"
+      class="p-0 modal fade"
+      role="dialog"
+      aria-labelledby="menu"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-slideout" role="document">
+        <div class="modal-content full">
+          <div class="modal-header" data-dismiss="modal">
+            Menu <i class="icon-close"></i>
+          </div>
+          <div class="menu modal-body">
+            <div class="row w-100">
+              <div class="items p-0 col-12 text-center">
+                <!-- Append [navbar] -->
+              </div>
+              <div class="contacts p-0 col-12 text-center">
+                <!-- Append [navbar] -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll [to top] -->
+    <div id="scroll-to-top" class="scroll-to-top">
+      <a href="#header" class="smooth-anchor">
+        <i class="icon-arrow-up"></i>
+      </a>
+    </div>
+
+    <!-- Modal structure -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="modal">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <!-- <iframe src="popup.html?course=level-4&5-diploma-in-accounting-and-business.html"></iframe> -->
+      <form id="hubspot-form-2" style="padding-top: 20px">
+        <div class="row align-items-center">
+          <div class="col-12 align-self-start text-center text-md-left">
+            <!-- Steps Group -->
+            <div class="row text-center form-content">
+              <div class="col-12 p-0">
+                <!-- Group 1 -->
+                <fieldset class="step-group">
+                  <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <input
+                        type="text"
+                        name="firstname"
+                        data-minlength="3"
+                        class="form-control field-name"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <input
+                        type="email"
+                        name="email"
+                        data-minlength="3"
+                        class="form-control field-email"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <!-- Country Code Input (Hidden) -->
+                      <input
+                        type="hidden"
+                        name="countrycode"
+                        id="countrycode"
+                      />
+
+                      <!-- Phone Number Input -->
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        class="form-control field-phone"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <select
+                        id="course_title"
+                        name="course_title"
+                        class="form-control"
+                        required
+                      >
+                        <option value="">Select Course</option>
+                        <option value="Electrical Vehicle Engineering Course">
+                          Electrical Vehicle Engineering Course
+                        </option>
+                        <option
+                          value="foundation_diploma_in_engineering__level_3_"
+                        >
+                          Level 3 - Foundation Diploma in Engineering
+                        </option>
+                        <option
+                          value="Level 3 - Foundation Diploma in Accountancy"
+                        >
+                          Level 3 - Foundation Diploma in Accountancy
+                        </option>
+                        <option
+                          value="Level-3 - Award In Assessing Vocationally Related Achievement"
+                        >
+                          Level 3 - Award In Assessing Vocationally Related
+                          Achievement
+                        </option>
+                        <option
+                          value="Level 4 & 5 Diploma in Information Technology"
+                        >
+                          Level 4 & 5 Diploma in Information Technology
+                        </option>
+                        <option
+                          value="Level 4 & 5 Diploma in Business Management"
+                        >
+                          Level 4 & 5 Diploma in Business Management
+                        </option>
+                        <option
+                          value="Level 4 & 5 - Diploma in Accounting and Business"
+                        >
+                          Level 4 & 5 - Diploma in Accounting and Business
+                        </option>
+                        <option value="Hospitality and Tourism (Level 5)">
+                          Level 4 & 5 - Diploma in Hospitality and Tourism
+                          Management
+                        </option>
+                        <option value="Education & Training (Level 5)">
+                          Level 4 & 5 - Diploma in Education & Training
+                        </option>
+                        <option
+                          value="Level 4 & 5 Higher International Diploma in Psychology"
+                        >
+                          Level 4 & 5 Higher International Diploma in Psychology
+                        </option>
+                        <option
+                          value="higher_international_diploma_in_automobile_engineering__level_4___5_"
+                        >
+                          Level 4 & 5 Higher International Diploma in Automobile
+                          Engineering
+                        </option>
+                        <option
+                          value="higher_international_diploma_in_civil_engineering__level_4___5_"
+                        >
+                          Level 4 & 5 Higher International Diploma in Civil
+                          Engineering
+                        </option>
+                        <option
+                          value="higher_international_diploma_in_electrical___electronics_engineering__level_4___5_"
+                        >
+                          Level 4 & 5 Higher International Diploma in Electrical
+                          & Electronics Engineering
+                        </option>
+                        <option
+                          value="higher_international_diploma_in_mechanical_engineering__level_4___5_"
+                        >
+                          Level 4 & 5 Higher International Diploma in Mechanical
+                          Engineering
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 input-group p-0">
+                    <button type="submit" class="btn primary-button">
+                      Submit<i class="icon-arrow-right-circle left"></i>
+                    </button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/intlTelInput.min.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        utilsScript:
+          "https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/utils.js",
+      });
+    </script>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show");
+      }
+
+      function closeMenu() {
+        document.getElementById("mobileMenu").classList.remove("show");
+      }
+
+      function scrollToSection(event) {
+        event.preventDefault();
+        let targetId = event.target.getAttribute("href").substring(1);
+        let targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          // Close the menu first before scrolling
+          closeMenu();
+
+          // Wait for the menu to close, then scroll smoothly
+          setTimeout(() => {
+            let offset = 80; // Adjust this offset if your navbar is fixed
+            let elementPosition =
+              targetSection.getBoundingClientRect().top + window.scrollY;
+            let offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }, 300); // Small delay to ensure the menu closes before scrolling
+        }
+      }
+    </script>
+
+    <script>
+      // Get elements
+      const openModalBtn = document.getElementById("open-modal");
+      const closeModalBtn = document.getElementById("close-modal");
+      const modalOverlay = document.getElementById("modal-overlay");
+      const modal = document.getElementById("modal");
+
+      // Open modal on button click
+      openModalBtn.addEventListener("click", function () {
+        modalOverlay.style.display = "block";
+        modal.style.display = "block";
+      });
+
+      // Close modal on overlay or close button click
+      closeModalBtn.addEventListener("click", function () {
+        modalOverlay.style.display = "none";
+        modal.style.display = "none";
+      });
+
+      modalOverlay.addEventListener("click", function () {
+        modalOverlay.style.display = "none";
+        modal.style.display = "none";
+      });
+
+      // Function to close the modal
+      function closeModal() {
+        modalOverlay.style.display = "none";
+        modal.style.display = "none";
+      }
+    </script>
+
+    <script>
+      // Initialize the intl-tel-input plugin
+      const phoneInputField = document.querySelector("#phone");
+      const iti = intlTelInput(phoneInputField, {
+        initialCountry: "ae", // Default to UAE (+971)
+        separateDialCode: true, // This separates the dial code from the rest of the number
+      });
+
+      document
+        .getElementById("hubspot-form-2")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          console.log("Form submission started.");
+
+          const portalId = "46404285";
+          const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
+
+          // Ensure the phone number is valid before submission
+          if (iti.isValidNumber()) {
+            const fullPhoneNumber = iti.getNumber(); // Full phone number including country code
+            const countryCode = iti.getSelectedCountryData().dialCode; // Extract the dial code
+            const phoneNumber = iti
+              .getNumber()
+              .replace(`+${countryCode}`, "")
+              .trim(); // Extract the phone number without the country code
+
+            console.log("Full Phone Number:", fullPhoneNumber);
+            console.log("Country Code:", countryCode);
+            console.log("Phone Number:", phoneNumber);
+
+            // Store the country code and phone number in hidden inputs if needed
+            document.querySelector('[name="countrycode"]').value = countryCode;
+            document.querySelector('[name="phone"]').value = phoneNumber;
+
+            // Form data to be sent to HubSpot
+            const formData = {
+              fields: [
+                {
+                  name: "firstname",
+                  value: document.querySelector('[name="firstname"]').value,
+                },
+                {
+                  name: "email",
+                  value: document.querySelector('[name="email"]').value,
+                },
+                {
+                  name: "phone",
+                  value: fullPhoneNumber, // Use the full phone number with country code
+                },
+                {
+                  name: "course_title",
+                  value: document.querySelector('[name="course_title"]').value,
+                },
+              ],
+            };
+
+            console.log("Form Data:", formData);
+
+            const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+
+            try {
+              const response = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              });
+
+              console.log("Response Status:", response.status);
+
+              if (response.ok) {
+                // Notify user of successful submission
+                // alert('Form submitted successfully!');
+
+                // Trigger PDF download and open
+                const pdfUrl =
+                  "assets/pdf/Diploma in Toursim and Hospitality (Level 4 & 5).pdf";
+                const pdfName =
+                  "Diploma in Toursim and Hospitality (Level 4 & 5)";
+                if (pdfUrl) {
+                  const link = document.createElement("a");
+                  link.href = pdfUrl;
+                  link.download = pdfName; // Name for the downloaded file
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+
+                  // Open the PDF in a new tab
+                  window.open(pdfUrl, "_blank");
+                } else {
+                  alert("PDF URL is missing or incorrect.");
+                }
+
+                // Close the modal
+                closeModal();
+                // Clear the form
+                document.getElementById("hubspot-form-2").reset();
+                iti.setNumber(""); // Reset the intl-tel-input field
+              } else {
+                alert("There was an error submitting the form.");
+              }
+            } catch (error) {
+              console.error("Error:", error);
+              alert("There was an error submitting the form.");
+            }
+          } else {
+            console.error("Invalid phone number.");
+            alert("Please enter a valid phone number.");
+          }
+        });
+    </script>
+
+    <!-- ==============================================
+        Google reCAPTCHA // Put your site key here
+        =============================================== -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf-NwEVAAAAAPo_wwOYxFW18D9_EKvwxJxeyUx7"></script>
+
+    <!-- ==============================================
+        Form Scripts
+        =============================================== -->
+    <script>
+      // Initialize the intl-tel-input plugin for the second form
+      const phoneInputField2 = document.querySelector("#phone-2");
+      const iti2 = intlTelInput(phoneInputField2, {
+        initialCountry: "ae", // Default to UAE (+971)
+        separateDialCode: true, // Separate dial code from the number
+      });
+
+      document
+        .getElementById("hubspot-form-3")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const portalId = "46404285";
+          const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
+
+          // Ensure the phone number is valid before submission
+          if (iti2.isValidNumber()) {
+            const fullPhoneNumber = iti2.getNumber(); // Full phone number with country code
+            const countryCode = iti2.getSelectedCountryData().dialCode; // Extract the dial code
+            const phoneNumber = iti2
+              .getNumber()
+              .replace(`+${countryCode}`, "")
+              .trim(); // Extract the phone number without country code
+
+            // Form data to be sent to HubSpot
+            const formData = {
+              fields: [
+                {
+                  name: "firstname",
+                  value: document.querySelector('[name="firstname-1"]').value,
+                },
+                {
+                  name: "email",
+                  value: document.querySelector('[name="email-1"]').value,
+                },
+                {
+                  name: "phone",
+                  value: fullPhoneNumber, // Use the full phone number with country code
+                },
+                {
+                  name: "country_of_residence",
+                  value: document.querySelector('[name="country_of_residence"]')
+                    .value,
+                },
+                {
+                  name: "course_title",
+                  value: document.querySelector('[name="course_title-1"]')
+                    .value,
+                },
+              ],
+            };
+
+            const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+
+            try {
+              const response = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              });
+
+              if (response.ok) {
+                window.location.href = "/thank-you.html";
+                document.getElementById("hubspot-form-3").reset();
+                iti.setNumber("");
+              } else {
+                alert("There was an error submitting the form.");
+              }
+            } catch (error) {
+              console.error("Error:", error);
+              alert("There was an error submitting the form.");
+            }
+          } else {
+            console.error("Invalid phone number.");
+            alert("Please enter a valid phone number.");
+          }
+        });
+    </script>
+
+    <!-- ==============================================
+        Vendor Scripts
+        =============================================== -->
+
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/jquery.easing.min.js"></script>
+    <script src="assets/js/vendor/jquery.inview.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/ponyfill.min.js"></script>
+    <script src="assets/js/vendor/slider.min.js"></script>
+    <script src="assets/js/vendor/animation.min.js"></script>
+    <script src="assets/js/vendor/progress-radial.min.js"></script>
+    <script src="assets/js/vendor/bricklayer.min.js"></script>
+    <script src="assets/js/vendor/gallery.min.js"></script>
+    <script src="assets/js/vendor/shuffle.min.js"></script>
+    <script src="assets/js/vendor/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- #endregion Global ========================= -->
+  </body>
+</html>

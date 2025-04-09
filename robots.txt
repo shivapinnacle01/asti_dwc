@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+
+
+Sitemap: https://www.astidubai.ac.ae/sitemap.xml
