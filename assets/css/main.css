@@ -5149,10 +5149,9 @@ footer .copyright a:not(.btn) {
   position: absolute;
   /* top: 100%; */
   left: 0;
-  background-color: white;
   padding: 20px;
   width: 100vw;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   z-index: 1000;
 }
 
@@ -5167,4 +5166,15 @@ footer .copyright a:not(.btn) {
   /* border: 1px solid red; */
 }
 .dropdown-menu {
+}
+
+.dot-style {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #1a1a1a; /* Rich dark gray */
+  border: 1px solid #555; /* Subtle outer edge */
+  vertical-align: top;
 }
