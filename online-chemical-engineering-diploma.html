@@ -439,6 +439,37 @@
         height: calc(var(--ring-size) * 1.5 - var(--ring-border-size) * 0.5);
         margin: 158px auto;
       }
+
+      .button-enrollNow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .enroll-button {
+        background: linear-gradient(135deg, #ff8a00, #e52e71);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 14px 24px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        align-items: center;
+      }
+      .enroll-button:hover {
+        background: linear-gradient(135deg, #e67e22, #d63031);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px);
+      }
+
+      .enroll-button:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      }
+
+
     </style>
   </head>
 
@@ -906,6 +937,16 @@
         </div>
       </div>
     </section>
+    <div class="button-enrollNow">
+      <button
+      class="enroll-button"
+      data-course="Chemical Engineering Program"
+      data-price="499 $"
+      data-image=""
+    >
+      Enroll Now
+    </button>
+     </div>
     <!-- About [image] -->
     <section id="about" class="section-1 highlights image-right">
       <div class="container">
@@ -2906,5 +2947,91 @@
     <script src="assets/js/main.js"></script>
 
     <!-- #endregion Global ========================= -->
+
+    <div class="col divided-col">
+      <div class="divided-col-item">
+        <!-- <h4>Credits</h4>
+        <span>12 Credits</span> -->
+        <button
+          class="enroll-button"
+          data-course="Level-3 Foundation Diploma in Accountancy"
+          data-price="8000 AED"
+          data-image=""
+        >
+          Enroll Now
+        </button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+.divided-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.divided-col {
+  flex: 0 0 20%; /* 18% width = 5 items in one row approx */
+  min-width: 160px; /* for responsiveness */
+  box-sizing: border-box;
+}
+
+.enroll-button {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.enroll-button:hover {
+  background: linear-gradient(135deg, #e67e22, #d63031);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.enroll-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+<!-- javascript code starts here -->
+<script>
+// Run after the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  const enrollButtons = document.querySelectorAll(".enroll-button");
+
+  enrollButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const courseName = encodeURIComponent(
+        button.getAttribute("data-course")
+      );
+      const price = encodeURIComponent(button.getAttribute("data-price"));
+      const image = encodeURIComponent(button.getAttribute("data-image"));
+
+      // Redirect to the payment page with parameters
+      window.location.href = `payment.html?course=${courseName}&price=${price}&image=${image}`;
+    });
+  });
+});
+</script>
+
+<!-- javascript code ends here -->
+
   </body>
 </html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enroll Now - Payment Form</title>
+    <style>
+      body {
+        font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #eef2f7;
+        margin: 0;
+        padding: 30px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+      }
+      .form-section,
+      .summary-section {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        transition: 0.3s ease;
+        box-sizing: border-box; /* Important to make padding counted inside width */
+      }
+      .form-section {
+        flex: 0 0 65%; /* instead of flex: 1.5 */
+        min-width: 300px;
+      }
+      .summary-section {
+        flex: 0 0 30%; /* instead of flex: 1 */
+        min-width: 280px;
+        height: fit-content;
+        position: sticky;
+        top: 30px;
+      }
+      h2,
+      h3 {
+        color: #222;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .form-group {
+        margin-bottom: 18px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #444;
+        font-size: 15px;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 13px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9fafb;
+        transition: 0.3s;
+      }
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #5c6bc0;
+        background: #fff;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(92, 107, 192, 0.2);
+      }
+      .payment-methods {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .payment-methods button {
+        flex: 1;
+        padding: 14px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        background: #f4f6f8;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 15px;
+        font-weight: 600;
+        color: #555;
+      }
+      .payment-methods button.active,
+      .payment-methods button:hover {
+        border-color: #00b894;
+        background: #d0f5ee;
+        color: #00b894;
+      }
+      .card-details,
+      .paypal-details {
+        margin-top: 20px;
+      }
+      .summary-box {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        background: #f9f9f9;
+        text-align: center;
+      }
+      .summary-box img {
+        width: 100px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+      }
+      .summary-title {
+        font-weight: bold;
+        font-size: 17px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .summary-info {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #666;
+      }
+      .total {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 15px;
+        color: #111;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(90deg, #ff8a00, #e52e71);
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.4s ease;
+        margin-top: 25px;
+      }
+      .submit-btn:hover {
+        background: linear-gradient(90deg, #e67e22, #d63031);
+      }
+      .error {
+        color: red;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .form-section,
+        .summary-section {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <h2>Billing Information</h2>
+        <form onsubmit="return validateForm()">
+          <div class="form-group">
+            <label for="firstname">First Name *</label>
+            <input type="text" id="firstname" required />
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name *</label>
+            <input type="text" id="lastname" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required />
+            <div id="emailError" class="error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" required />
+            <div id="phoneError" class="error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" required>
+              <option value="">Select Country</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>India</option>
+              <option>United States</option>
+              <option>Others</option>
+            </select>
+            <div id="countryError" class="error"></div>
+          </div>
+
+          <h3>Payment Method</h3>
+          <div class="payment-methods">
+            <button
+              type="button"
+              id="cardBtn"
+              class="active"
+              onclick="selectPayment('card')"
+            >
+              Card
+            </button>
+            <button
+              type="button"
+              id="paypalBtn"
+              onclick="selectPayment('paypal')"
+            >
+              PayPal
+            </button>
+          </div>
+
+          <div class="card-details" id="cardDetails">
+            <div class="form-group">
+              <label for="cardnumber">Card Number *</label>
+              <input type="text" id="cardnumber" maxlength="16" required />
+              <div id="cardError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="expiry">Expiration Date (MM/YY) *</label>
+              <input
+                type="text"
+                id="expiry"
+                placeholder="MM/YY"
+                maxlength="5"
+                required
+              />
+              <div id="expiryError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV *</label>
+              <input type="text" id="cvv" maxlength="4" required />
+              <div id="cvvError" class="error"></div>
+            </div>
+          </div>
+
+          <div class="paypal-details" id="paypalDetails" style="display: none">
+            <div class="form-group">
+              <label for="paypalEmail">PayPal Email *</label>
+              <input type="email" id="paypalEmail" />
+              <div id="paypalEmailError" class="error"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+
+      <div class="summary-section">
+        <div class="summary-box">
+          <img
+            id="courseImage"
+            src="https://via.placeholder.com/100x100.png?text=Product"
+            alt="Product Image"
+          />
+          <div id="courseNameDisplay" class="summary-title">
+            Loading course info...
+          </div>
+          <div class="summary-info" id="taxInfo">Sales Tax (8%): $0</div>
+          <div class="total" id="totalAmount">Total: $0</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getCourseFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const course = urlParams.get("course");
+        const price = urlParams.get("price");
+        const image = urlParams.get("image");
+
+        document.getElementById("courseNameDisplay").innerText = course
+          ? decodeURIComponent(course)
+          : "Course information not found.";
+
+        if (image) {
+          document.getElementById("courseImage").src =
+            decodeURIComponent(image);
+        }
+
+        if (price) {
+          const basePrice = parseFloat(price);
+          const tax = (basePrice * 0.08).toFixed(2);
+          const total = (basePrice + parseFloat(tax)).toFixed(2);
+
+          document.getElementById(
+            "taxInfo"
+          ).innerText = `Sales Tax (8%): $${tax}`;
+          document.getElementById("totalAmount").innerText = `Total: $${total}`;
+        }
+      }
+      getCourseFromURL();
+
+      function validateForm() {
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const country = document.getElementById("country").value;
+        const cardnumber = document.getElementById("cardnumber").value.trim();
+        const expiry = document.getElementById("expiry").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+        const paypalEmail = document.getElementById("paypalEmail").value.trim();
+
+        let valid = true;
+        document
+          .querySelectorAll(".error")
+          .forEach((el) => (el.innerHTML = ""));
+
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+        if (!emailPattern.test(email)) {
+          document.getElementById("emailError").innerHTML =
+            "Please enter a valid email.";
+          valid = false;
+        }
+
+        const phonePattern = /^[0-9]{7,15}$/;
+        if (!phonePattern.test(phone)) {
+          document.getElementById("phoneError").innerHTML =
+            "Phone number must be 7-15 digits.";
+          valid = false;
+        }
+
+        if (country === "") {
+          document.getElementById("countryError").innerHTML =
+            "Please select a country.";
+          valid = false;
+        }
+
+        if (document.getElementById("cardDetails").style.display !== "none") {
+          const cardPattern = /^[0-9]{13,16}$/;
+          if (!cardPattern.test(cardnumber)) {
+            document.getElementById("cardError").innerHTML =
+              "Invalid card number.";
+            valid = false;
+          }
+          if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+            document.getElementById("expiryError").innerHTML =
+              "Expiry must be MM/YY.";
+            valid = false;
+          }
+          if (!/^\d{3,4}$/.test(cvv)) {
+            document.getElementById("cvvError").innerHTML =
+              "CVV must be 3 or 4 digits.";
+            valid = false;
+          }
+        }
+
+        if (document.getElementById("paypalDetails").style.display !== "none") {
+          if (!emailPattern.test(paypalEmail)) {
+            document.getElementById("paypalEmailError").innerHTML =
+              "Please enter a valid PayPal email.";
+            valid = false;
+          }
+        }
+
+        if (valid) {
+          alert("Payment successful! Thank you for enrolling.");
+        }
+        return false;
+      }
+
+      function selectPayment(method) {
+        document.getElementById("cardBtn").classList.remove("active");
+        document.getElementById("paypalBtn").classList.remove("active");
+
+        if (method === "card") {
+          document.getElementById("cardDetails").style.display = "block";
+          document.getElementById("paypalDetails").style.display = "none";
+          document.getElementById("cardBtn").classList.add("active");
+        } else {
+          document.getElementById("cardDetails").style.display = "none";
+          document.getElementById("paypalDetails").style.display = "block";
+          document.getElementById("paypalBtn").classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
