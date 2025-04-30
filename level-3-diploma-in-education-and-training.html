@@ -332,17 +332,17 @@
         z-index: 0;
       }
 
-      .divided-list {
+      /* .divided-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
 
       .divided-col {
-        flex: 0 0 20%; /* 18% width = 5 items in one row approx */
-        min-width: 160px; /* for responsiveness */
+        flex: 0 0 20%;
+        min-width: 160px;
         box-sizing: border-box;
-      }
+      } */
 
       .enroll-button {
         background: linear-gradient(135deg, #ff8a00, #e52e71);
@@ -366,6 +366,12 @@
         transform: translateY(0);
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
       }
+      .button-enrollNow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
     </style>
   </head>
 
@@ -860,13 +866,13 @@
     <section id="funfacts" class="section-3" style="padding: 0px 0 !important">
       <div class="container">
         <div class="row divided-list">
-          <div class="col-md-3 divided-col">
+          <div class="col-md-3 col-sm-6">
             <div class="divided-col-item">
               <h4>Mode of Study</h4>
               <span>Online</span>
             </div>
           </div>
-          <div class="col-md-3 divided-col">
+          <div class="col-md-3 col-sm-6">
             <div class="divided-col-item">
               <h4>Program Duration</h4>
               <span>1 Years / 12 Months</span>
@@ -878,22 +884,21 @@
               <span>12 Credits</span>
             </div>
           </div> -->
-          <div class="col-md-3 divided-col">
+          <div class="col-md-3 col-sm-6">
             <div class="divided-col-item">
               <h4>QUALIFICATION</h4>
               <span>UK LEVEL 3</span>
             </div>
           </div>
-          <div class="col-md-3 divided-col">
+          <div class="col-md-3 col-sm-6">
             <div class="divided-col-item">
               <h4>FEE</h4>
               <span>8000 AED</span>
             </div>
           </div>
-          <div class="col divided-col">
+          <!-- <div class="col divided-col">
             <div class="divided-col-item">
-              <!-- <h4>Credits</h4>
-              <span>12 Credits</span> -->
+            
               <button
                 class="enroll-button"
                 data-course="Level-3  Diploma in Education and Training"
@@ -903,10 +908,20 @@
                 Enroll Now
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
+    <div class="button-enrollNow">
+      <button
+      class="enroll-button"
+      data-course="Level-3  Diploma in Education and Training"
+      data-price="8000 AED"
+      data-image=""
+    >
+      Enroll Now
+    </button>
+    </div>
     <!-- About [image] -->
     <section id="about" class="section-1 highlights image-right">
       <div class="container">
