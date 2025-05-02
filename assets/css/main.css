@@ -5231,3 +5231,7 @@ footer .copyright a:not(.btn) {
 .nav-item.program .dropdown-menu {
   transition: opacity 0.3s ease;
 }
+
+.dropdown-menu {
+  margin-top: -18px !important;
+}
