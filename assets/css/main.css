@@ -5178,3 +5178,56 @@ footer .copyright a:not(.btn) {
   border: 1px solid #555; /* Subtle outer edge */
   vertical-align: top;
 }
+
+/* Ensure submenu is absolutely positioned under the nav item */
+.nav-item.program {
+  position: relative;
+}
+
+.nav-item.program .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Align it directly under the Programs link */
+  left: 0;
+  background-color: #fff; /* or your submenu bg */
+  z-index: 999;
+  padding: 20px;
+  width: max-content;
+}
+
+/* Show submenu on hover */
+.nav-item.program:hover .dropdown-menu,
+.nav-item.program .dropdown-menu:hover {
+  display: block;
+}
+
+/* Optional: make submenu transition smoother */
+.nav-item.program .dropdown-menu {
+  transition: opacity 0.3s ease;
+}
+/* Ensure submenu is absolutely positioned under the nav item */
+.nav-item.program {
+  position: relative;
+}
+
+.nav-item.program .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Align it directly under the Programs link */
+  left: 0;
+  background-color: #fff; /* or your submenu bg */
+  z-index: 999;
+  padding: 20px;
+  width: max-content;
+}
+
+/* Show submenu on hover */
+.nav-item.program:hover .dropdown-menu,
+.nav-item.program .dropdown-menu:hover {
+  display: block;
+}
+
+/* Optional: make submenu transition smoother */
+.nav-item.program .dropdown-menu {
+  transition: opacity 0.3s ease;
+}
