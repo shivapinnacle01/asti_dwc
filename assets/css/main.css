@@ -4236,8 +4236,8 @@ footer .copyright a:not(.btn) {
   display: none;
   position: fixed;
   z-index: 5;
-  right: 25px;
-  bottom: 25px;
+  right: 20px;
+  bottom: 75px;
   opacity: 0.75;
   transition-timing-function: ease;
   transition-duration: 0.4s;
