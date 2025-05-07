@@ -358,9 +358,11 @@
 
       .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-        padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;  
+  margin: 0 auto;     
       }
 
       .course-card {
@@ -371,6 +373,7 @@
         display: flex;
         flex-direction: column;
         transition: transform 0.3s;
+        max-width: 260px;
       }
 
       .course-card:hover {
@@ -847,7 +850,7 @@ src="https://www.facebook.com/tr?id=1007818057796060&ev=PageView&noscript=1"
         <h2 class="category-title">Accounting and Finance Training</h2>
   
         <div class="grid-container">
-          <div class="course-card">
+          <!-- <div class="course-card">
             <img
               src="https://via.placeholder.com/300x180?text=HTML+CSS"
               alt="HTML CSS Course"
@@ -858,9 +861,9 @@ src="https://www.facebook.com/tr?id=1007818057796060&ev=PageView&noscript=1"
               <div class="course-info">Duration: 4 weeks</div>
               <a href="course-html-css.html" class="enroll-btn">Read More</a>
             </div>
-          </div>
+          </div> -->
   
-          <div class="course-card">
+          <!-- <div class="course-card">
             <img
               src="https://via.placeholder.com/300x180?text=JavaScript"
               alt="JavaScript Course"
@@ -871,9 +874,9 @@ src="https://www.facebook.com/tr?id=1007818057796060&ev=PageView&noscript=1"
               <div class="course-info">Duration: 6 weeks</div>
               <a href="course-js.html" class="enroll-btn">Read More</a>
             </div>
-          </div>
+          </div> -->
   
-          <div class="course-card">
+          <!-- <div class="course-card">
             <img
               src="https://via.placeholder.com/300x180?text=React"
               alt="React Course"
@@ -884,17 +887,17 @@ src="https://www.facebook.com/tr?id=1007818057796060&ev=PageView&noscript=1"
               <div class="course-info">Duration: 5 weeks</div>
               <a href="course-react.html" class="enroll-btn">Read More</a>
             </div>
-          </div>
+          </div> -->
   
           <div class="course-card">
             <img
-              src="https://via.placeholder.com/300x180?text=Full+Stack"
-              alt="Full Stack Course"
+              src="./assets/images/homepage-img/L3-Engineering-in-UAE.png"
+              alt="Oracle Financial"
             />
             <div class="course-content">
               <div class="course-name">Oracle Financial</div>
-              <div class="course-info">Price: ₹2999</div>
-              <div class="course-info">Duration: 8 weeks</div>
+              <div class="course-info">Price: 2179$</div>
+              <div class="course-info">Duration: 12Months/1 Year</div>
               <a href="course-fullstack.html" class="enroll-btn">Read More</a>
             </div>
           </div>
