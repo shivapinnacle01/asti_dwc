@@ -942,9 +942,10 @@
     <div class="button-enrollNow">
       <button
       class="enroll-button"
-      data-course="Data Analysis Training Program"
+      data-id="Data Analysis Training Proram"
+      data-name="Data Analysis Training Program"
       data-price="199 $"
-      data-image=""
+      
     >
       Enroll Now
     </button>
@@ -1513,11 +1514,12 @@
       </div>
     </div>
     <div class="button-enrollNow" style="margin-bottom: 10px; background-color:#fff;">
-      <button
+       <button
       class="enroll-button"
-      data-course="Data Analysis Training Program"
+      data-id="Data Analysis Training Proram"
+      data-name="Data Analysis Training Program"
       data-price="199 $"
-      data-image=""
+      
     >
       Apply Now
     </button>
@@ -2573,9 +2575,10 @@
     <div class="button-enrollNow" style="margin-bottom: 10px;">
       <button
       class="enroll-button"
-      data-course="Data Analysis Training Program"
+      data-id="Data Analysis Training Proram"
+      data-name="Data Analysis Training Program"
       data-price="199 $"
-      data-image=""
+      
     >
       Register Now
     </button>
@@ -3013,7 +3016,7 @@
     <!-- #endregion Global ========================= -->
      
   <!-- javascript code starts here -->
-    <script>
+    <!-- <script>
       // Run after the page loads
       document.addEventListener("DOMContentLoaded", function () {
         const enrollButtons = document.querySelectorAll(".enroll-button");
@@ -3031,9 +3034,69 @@
           });
         });
       });
-    </script>
+    </script> -->
 
     <!-- javascript code ends here -->
+
+ <!-- api javascript code starts here -->
+     <script src="https://payments.geidea.ae/hpp/geideaCheckout.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".enroll-button");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", function () {
+            const courseId = this.dataset.id;
+            const courseName = this.dataset.name;
+            const coursePrice = parseFloat(this.dataset.price);
+
+            if (!coursePrice || coursePrice < 1) {
+                alert("Invalid course price. Please contact support.");
+                return;
+            }
+
+            fetch("https://payment.designbydr.site/create_payment_session.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    course_id: courseId,
+                    course_name: courseName,
+                    price: coursePrice,
+                    currency: "AED"
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success && data.sessionId) {
+                    const payment = new GeideaCheckout(onSuccess, onError, onCancel);
+                    payment.startPayment(data.sessionId);
+                } else {
+                    alert("❌ Failed to get session ID: " + (data.message || "Unknown error"));
+                }
+            })
+            .catch(err => {
+                alert("❌ Error connecting to payment gateway.");
+                console.error(err);
+            });
+        });
+    });
+
+    function onSuccess(data) {
+        alert("✅ Payment successful. Thank you!");
+        // You can redirect or trigger unlock logic here
+    }
+
+    function onError(data) {
+        alert("❌ Payment Failed:\n" + JSON.stringify(data, null, 2));
+    }
+
+    function onCancel(data) {
+        alert("⚠️ Payment Cancelled:\n" + JSON.stringify(data, null, 2));
+    }
+});
+</script>
+     <!-- api javascript code ends here -->
+
 
   </body>
 </html>
