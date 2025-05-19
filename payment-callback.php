@@ -23,7 +23,7 @@ $referenceId = $data['merchantReferenceId'];
 $status = strtolower($data['status']); // Should be "paid" or similar
 
 // ✅ Connect to MySQL
-$conn = new mysqli("localhost", "desimnkd_my_lms_db", "Shivaram@123", "desimnkd_my_lms_db");
+$conn = new mysqli("localhost", "asti_dwc_admin", "Ast!Dwc@2025", "asti_dwc_admin");
 if ($conn->connect_error) {
     http_response_code(500);
     echo "Database connection failed.";

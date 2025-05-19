@@ -94,9 +94,9 @@ if (isset($responseData["session"]["id"]) && $responseData["responseCode"] === "
 
     // DB Config
     $dbHost = "localhost";
-    $dbUser = "desimnkd_my_lms_db";
-    $dbPass = "Shivaram@123";
-    $dbName = "desimnkd_my_lms_db";
+    $dbUser = "asti_dwc_admin";
+    $dbPass = "Ast!Dwc@2025";
+    $dbName = "asti_dwc_admin";
 
     // Connect DB
     $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
