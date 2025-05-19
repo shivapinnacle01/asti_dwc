@@ -27,7 +27,7 @@ $apiPassword = "e8374eaa-a151-47a6-b967-99dc482ecaaf";
 
 // Endpoint
 $url = "https://api.geidea.ae/payment-intent/api/v2/direct/session";
-$callbackUrl = "https://payment.designbydr.site/payment-callback.php";
+$callbackUrl = "https://www.astidubai.ac.ae/payment-callback.php";
 $returnUrl = "https://www.astidubai.ac.ae/";
 
 // Timestamp and Reference
