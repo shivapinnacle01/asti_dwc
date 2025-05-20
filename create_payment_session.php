@@ -88,37 +88,11 @@ file_put_contents("geidea-log.txt", print_r([
     "response" => $responseData
 ], true));
 
-// ✅ If payment session is successful, insert into DB
+// ✅ Return response to frontend
 if (isset($responseData["session"]["id"]) && $responseData["responseCode"] === "000") {
-    $sessionId = $responseData["session"]["id"];
-
-    // DB Config
-    $dbHost = "localhost";
-    $dbUser = "asti_dwc_admin";
-    $dbPass = "Ast!Dwc@2025";
-    $dbName = "asti_dwc_admin";
-
-    // Connect DB
-    $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
-    if ($conn->connect_error) {
-        echo json_encode([
-            "success" => false,
-            "message" => "Database connection failed: " . $conn->connect_error
-        ]);
-        exit;
-    }
-
-    // Insert payment record
-    $stmt = $conn->prepare("INSERT INTO geidea_payments (course_id, course_name, amount, currency, session_id, reference_id, created_at) VALUES (?, ?, ?, ?, ?, ?, NOW())");
-    $stmt->bind_param("ssdsss", $courseId, $courseName, $price, $currency, $sessionId, $merchantReferenceId);
-    $stmt->execute();
-    $stmt->close();
-    $conn->close();
-
-    // Return success with session
     echo json_encode([
         "success" => true,
-        "sessionId" => $sessionId
+        "sessionId" => $responseData["session"]["id"]
     ]);
 } else {
     echo json_encode([
