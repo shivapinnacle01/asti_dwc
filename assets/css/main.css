@@ -5073,6 +5073,10 @@ footer .copyright a:not(.btn) {
   flex-direction: column;
   gap: 30px;
   padding: 20px;
+
+
+  /* added now */
+  
 }
 .menu-row {
   display: flex;
@@ -5080,6 +5084,9 @@ footer .copyright a:not(.btn) {
   flex-wrap: nowrap; /* prevent items from wrapping early */
   justify-content: space-between; /* better spacing */
   align-items: flex-start; /* prevent vertical stretching */
+   
+  /* added now */
+  
 }
 
 /* Show menu on hover */
@@ -5090,12 +5097,15 @@ footer .copyright a:not(.btn) {
   display: flex !important;
   flex-wrap: wrap;
   gap: 60px; /* was 40px */
+
+  /* added now */
+ 
 }
 
 /* Group each heading + list */
 .dropdown-category {
   min-width: 250px;
-  max-width: 300px;
+  max-width: 280px;
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
