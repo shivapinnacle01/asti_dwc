@@ -3099,103 +3099,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     emailjs.init('BCGSM0kRS6CvfRzFt');
 </script>
 
-<script>
-    // Initialize intl-tel-input plugin for phone input
-    const phoneInputField2 = document.querySelector("#phone-2");
-    const iti2 = intlTelInput(phoneInputField2, {
-        initialCountry: "ae", // Default to UAE (+971)
-        separateDialCode: true, // Separate dial code from the number
-    });
+<!-- form code starts here -->
+    <script>
+  // Initialize intl-tel-input
+  const phoneInputField2 = document.querySelector("#phone-2");
+  const iti2 = window.intlTelInput(phoneInputField2, {
+    initialCountry: "ae",
+    separateDialCode: true,
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
 
-    document.getElementById("hubspot-form-3").addEventListener("submit", async function (e) {
-        e.preventDefault();
+  document
+    .getElementById("hubspot-form-3")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-        const portalId = "46404285";
-        const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
+      const portalId = "46404285";
+      const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
 
-        if (iti2.isValidNumber()) {
-            const fullPhoneNumber = iti2.getNumber(); // Full phone number with country code
-            const countryCode = iti2.getSelectedCountryData().dialCode; // Extract dial code
-            const phoneNumber = fullPhoneNumber.replace(`+${countryCode}`, "").trim(); // Extract actual number
+      if (iti2.isValidNumber()) {
+        const fullPhoneNumber = iti2.getNumber();
+        const courseTitleField = document.querySelector(
+          '[name="course_title-1"]'
+        );
+        const courseTitleValue = courseTitleField ? courseTitleField.value : "";
 
-            // Capture form values
-            const userName = document.querySelector('[name="firstname-1"]').value.trim();
-            const userEmail = document.querySelector('[name="email-1"]').value.trim();
-            const userCourse = document.querySelector('[name="course_title-1"]').value.trim();
-            const userCountry = document.querySelector('[name="country_of_residence"]').value.trim();
+        const formData = {
+          fields: [
+            {
+              name: "firstname",
+              value: document.querySelector('[name="firstname-1"]').value,
+            },
+            {
+              name: "email",
+              value: document.querySelector('[name="email-1"]').value,
+            },
+            {
+              name: "phone",
+              value: fullPhoneNumber,
+            },
+            {
+              name: "course_title",
+              value: courseTitleValue,
+            },
+          ],
+          context: {
+            hutk:
+              document.cookie
+                .split("; ")
+                .find((row) => row.startsWith("hubspotutk="))
+                ?.split("=")[1] || "",
+            pageUri: window.location.href,
+            pageName: document.title,
+          },
+        };
 
-            // Debugging: Log submitted values to console
-            console.log("Submitting to HubSpot with the following values:");
-            console.log("First Name:", userName);
-            console.log("Email:", userEmail);
-            console.log("Phone (Full):", fullPhoneNumber);
-            console.log("Phone (Without Code):", phoneNumber);
-            console.log("Country of Residence:", userCountry);
-            console.log("Course Title:", userCourse);
+        const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
 
-            // Ensure all fields have values
-            if (!userName || !userEmail || !userCourse || !userCountry) {
-                alert("Please fill in all required fields.");
-                return;
-            }
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
 
-            // Form data for HubSpot
-            const formData = {
-                fields: [
-                    { name: "firstname", value: userName },
-                    { name: "email", value: userEmail },
-                    { name: "phone", value: fullPhoneNumber },
-                    { name: "country_of_residence", value: userCountry },
-                    { name: "course_title", value: userCourse },
-                ],
-            };
-
-            const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
-
-            try {
-                const response = await fetch(endpoint, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(formData),
-                });
-
-                if (response.ok) {
-                    console.log("✅ HubSpot form submitted successfully!");
-
-                    // Send confirmation email via EmailJS
-                    emailjs.send("service_5d5mo5k", "template_38k4hmr", {
-                        user_email: userEmail,
-                        user_name: userName,
-                        course: userCourse,
-                        phone: fullPhoneNumber, // Passing phone as well
-                        country: userCountry,
-                    }).then(() => {
-                        console.log("✅ Confirmation email sent successfully!");
-                    }).catch((err) => {
-                        console.error("❌ Failed to send confirmation email:", err);
-                    });
-
-                    // Redirect to Thank You page
-                 
-                    
-                    // Reset form and clear phone input
-                    document.getElementById("hubspot-form-3").reset();
-                    iti2.setNumber("");
-                } else {
-                    const errorResponse = await response.json();
-                    console.error("❌ Error submitting to HubSpot:", errorResponse);
-                    alert("There was an error submitting the form. Please try again.");
-                }
-            } catch (error) {
-                console.error("❌ Network or server error:", error);
-                alert("There was an error submitting the form.");
-            }
-        } else {
-            console.error("❌ Invalid phone number.");
-            alert("Please enter a valid phone number.");
+          if (response.ok) {
+            window.location.href = "/thank-you.html";
+            document.getElementById("hubspot-form-3").reset();
+            iti2.setNumber("");
+          } else {
+            const errorText = await response.text();
+            console.error("HubSpot Error:", errorText);
+            alert("There was an error submitting the form.");
+          }
+        } catch (error) {
+          console.error("Network Error:", error);
+          alert("There was an error submitting the form.");
         }
+      } else {
+        alert("Please enter a valid phone number.");
+      }
     });
 </script>
+
+<!-- form code ends here -->
+
   
     <!-- ==============================================
         Vendor Scripts
